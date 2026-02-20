@@ -34,9 +34,10 @@ public class Factorial {
 		*/
 		//YOUR CODE STARTS HERE
          while (scanner.hasNext()) {
-             String number = scanner.nextLine();
+             String userInput = scanner.nextLine();
+
              try {
-                 num = Integer.parseInt(number);
+                 num = Integer.parseInt(userInput);
                  if ( 1 <= num && num <= 10) {
                      return num;
                  }
@@ -69,7 +70,6 @@ public class Factorial {
          while (num > 0) {
              result *= num--;
          }
- 
 
 		//YOUR CODE ENDS HERE
 		this.printStream.print("The Factorial is: " + result);		
