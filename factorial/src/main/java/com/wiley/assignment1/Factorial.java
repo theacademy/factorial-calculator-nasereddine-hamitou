@@ -32,11 +32,24 @@ public class Factorial {
 			
 		- All code should be inside the placeholders below.
 		*/
-
 		//YOUR CODE STARTS HERE
+         while (scanner.hasNext()) {
+             String userInput = scanner.nextLine();
+
+             try {
+                 num = Integer.parseInt(userInput);
+                 if ( 1 <= num && num <= 10) {
+                     return num;
+                 }
+                 else  {
+                     this.printStream.print("Invalid entry. Please enter an integer between 1 and 10, inclusive.");
+                 }
+             } catch (Exception e) {
+                 this.printStream.print("Invalid entry. Please enter an integer between 1 and 10, inclusive.");
+             }
+         }
 
 		return -1;
-
 		//YOUR CODE ENDS HERE
 		 
 			
@@ -52,9 +65,11 @@ public class Factorial {
 		*/
 		 
 		int result = 1;
-		//YOUR CODE STARTS HERE
 
- 
+		//YOUR CODE STARTS HERE
+         while (num > 0) {
+             result *= num--;
+         }
 
 		//YOUR CODE ENDS HERE
 		this.printStream.print("The Factorial is: " + result);		
